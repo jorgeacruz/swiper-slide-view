@@ -1,14 +1,24 @@
 
 import React from 'react';
-import { StyleSheet, Text, View, StatusBar } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, Dimensions, Image } from 'react-native';
 import Swiper from 'react-native-swiper';
+
+const {width, height} = Dimensions.get("screen");
 
 
 export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar hidden={true} />
-      <Text>Lets Startedasaas</Text>
+        <Swiper autoplay={true}>
+          <Image source={require('./src/images/player1.jpeg')} style={styles.ImageBG} />
+          <Image source={require('./src/images/player2.jpeg')} style={styles.ImageBG} />
+          <Image source={require('./src/images/player3.jpeg')} style={styles.ImageBG} />
+          <Image source={require('./src/images/player4.jpeg')} style={styles.ImageBG} />
+          <Image source={require('./src/images/player5.jpeg')} style={styles.ImageBG} />
+          <Image source={require('./src/images/player6.jpeg')} style={styles.ImageBG} />
+        </Swiper>
+      
     </View>
   );
 }
@@ -20,4 +30,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  ImageBG: {
+    width:width,
+    height:height
+  }
 });
