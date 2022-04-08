@@ -1,12 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
+
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, StatusBar } from 'react-native';
+import Swiper from 'react-native-swiper';
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Lets create your slide view app!</Text>
-      <StatusBar style="auto" />
+      <StatusBar hidden={true} />
+      <Text>Lets Startedasaas</Text>
     </View>
   );
 }
